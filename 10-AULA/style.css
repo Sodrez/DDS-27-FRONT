@@ -1,0 +1,56 @@
+
+/* SELETOR POR TAG */
+body{
+    background-color: navajowhite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right:30px;
+    padding-bottom: 50px;
+    
+}
+/* SELETOR POR ID */
+#topo{
+    background-color: brown;
+    padding: 10px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    border: 10px solid black;
+    border-radius: 20px;
+}
+
+/* SELETOR POR CLASS */
+.texto-top{
+    font-style:italic;
+    text-decoration: underline;
+}
+
+/* estiliza os elementos com a class bloco */
+.bloco{
+    background-color:white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.destaque{
+    background-color: gold;
+    
+}
+
+.texto-destaque{
+    color: darkred;
+    font-weight:bold ;
+}
+
+.texto-top{
+    color: darkred;
+}
+
+#caixa-unica{
+    padding: 10px;
+    border: 2px purple;
+    background-color: #ede9fe;
+
+}
