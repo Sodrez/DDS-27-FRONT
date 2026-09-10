@@ -1,0 +1,65 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: wheat;
+    height: 2000px;
+}
+
+
+.pai{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+.filho{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+/* TIPO ESTÁTICO */
+#pai-estatico{
+    background-color: aqua;
+    position: static
+}
+
+#fi-estatico{
+    background-color: yellow;
+}
+
+/* TIPO FIXO */
+#pai-fixo{
+    background-color: white;
+    position: fixed;
+    /* top: 50px;
+    left: 200px; */
+    /* bottom: 0px;
+    right: 30px; */
+    z-index: -1;
+}
+
+#fi-fixo{
+    background-color: black;
+}
+
+/* TIPO STICK */
+#pai-grudado{
+    background-color: chartreuse;
+    height: 1200px;
+    width: 1000px;
+}
+
+#fi-grudado{
+    background-color: blue;
+    position: sticky;
+    top: 10px;
+    left: 15px;
+}
+
+
+
+
