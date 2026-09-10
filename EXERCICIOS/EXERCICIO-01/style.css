@@ -1,0 +1,37 @@
+*{
+padding: 0px;
+margin: 0px;
+text-align:center;
+}
+
+body{
+background-color: red;
+}
+
+#topo{
+    background-color: lightgrey;
+    padding: 100px;
+}
+
+.coisa{
+    color: white;
+}
+
+.borda{
+    background-color: green;
+    border: 10px solid red;
+    margin: 15px ;
+    padding: 20px;
+
+}
+#coisinha{
+    background-color: gray;
+    color: white;
+    padding: 50px 50px;
+    
+}
+#coisinhas{
+    color: white;
+}
+
+
