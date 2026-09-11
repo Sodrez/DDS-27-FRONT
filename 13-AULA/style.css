@@ -1,0 +1,17 @@
+body{
+    background-color:
+    aquamarine;
+}
+
+.material-symbols-outlined{
+    font-size: 100px;
+}
+
+.icones:hover{
+    color: white;
+    background-color: purple;
+    font-size:150px;
+    transition: 3s;
+}
+
+
