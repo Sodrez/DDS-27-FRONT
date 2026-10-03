@@ -1,197 +1,335 @@
-/* RESET */
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
+
+/* =====================================================
+   RESET — CONFIGURAÇÃO INICIAL
+   ===================================================== */
+
+/* O seletor universal (*) seleciona todos os elementos
+   da página HTML. Essas propriedades removem os espaçamentos
+   padrão e facilitam o controle do tamanho dos elementos. */
+
+* {
+    margin: 0px;              /* Remove a margem externa padrão */
+    padding: 0px;             /* Remove o espaçamento interno padrão */
+    box-sizing: border-box;   /* Inclui padding e borda no tamanho total */
 }
 
-/* BASE */
-body{
-    font-family: "Inter" sans-serif;
-    background-color: #f4f6fb;
-    color: #1f2397;
-    line-height: 1.6;
+
+/* =====================================================
+   BASE — ESTILOS GERAIS DA PÁGINA
+   ===================================================== */
+
+/* O body representa o corpo da página, onde fica
+   praticamente todo o conteúdo visível do site. */
+
+body {
+    font-family: "Inter", sans-serif; /* Define a fonte principal */
+    background-color: #f4f6fb;       /* Define o fundo cinza azulado */
+    color: #1f2397;                  /* Define a cor padrão dos textos */
+    line-height: 1.6;                /* Aumenta o espaço entre as linhas */
 }
 
-img{
-    max-width: 100%;
-    display:block;
+
+/* Configura todas as imagens do site. */
+
+img {
+    max-width: 100%; /* Impede que a imagem ultrapasse seu contêiner */
+    display: block;  /* Remove espaços extras de imagens inline */
 }
 
-a{
-    text-decoration: none;
+
+/* Configura todos os links (elementos <a>). */
+
+a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
 }
 
-.container{
-    width:90%;
-    margin: 0px auto;
-    max-width: 1200px;
+
+/* A classe container centraliza o conteúdo e limita sua largura. */
+
+.container {
+    width: 90%;          /* Ocupa 90% da largura disponível */
+    margin: 0px auto;    /* Centraliza horizontalmente */
+    max-width: 1200px;    /* Impede que fique largo demais */
 }
 
-/* TOPO */
-.topo{
-    background: #0f172a;
-    position: sticky;
-    top:0;
-    z-index:100;
-    box-shadow: 0 3px 14px gray;
+
+/* =====================================================
+   TOPO — CABEÇALHO E MENU DE NAVEGAÇÃO
+   ===================================================== */
+
+/* Estiliza o cabeçalho do site.
+   A classe topo pode permanecer visível durante a rolagem. */
+
+.topo {
+    background: #0f172a;              /* Fundo azul-marinho */
+    position: sticky;                 /* Mantém o topo preso ao rolar */
+    top: 0;                            /* Fixa na parte superior */
+    z-index: 100;                      /* Mantém o topo sobre outros elementos */
+    box-shadow: 0 3px 14px gray;       /* Adiciona sombra abaixo do cabeçalho */
 }
 
-.navegacao{
-    display: flex;
-    min-height: 85px;
-    align-items: center;
-    justify-content: space-between;
-    gap:20px;
+
+/* Organiza os elementos da navegação com Flexbox. */
+
+.navegacao {
+    display: flex;                    /* Ativa o Flexbox */
+    min-height: 85px;                  /* Define a altura mínima */
+    align-items: center;               /* Centraliza os itens verticalmente */
+    justify-content: space-between;    /* Separa logo e menu */
+    gap: 20px;                         /* Espaço entre os elementos */
 }
 
-.logo{
-    color: white;
-    font-size:30px;
-    font-weight: bold;
-    letter-spacing: 7px;
+
+/* Estiliza o nome ou logotipo do site. */
+
+.logo {
+    color: white;          /* Deixa o texto branco */
+    font-size: 30px;       /* Aumenta o tamanho da fonte */
+    font-weight: bold;     /* Deixa o texto em negrito */
+    letter-spacing: 7px;   /* Aumenta o espaço entre as letras */
 }
 
-.menu{
-    list-style: none;
-    display: flex;
-    gap: 17px;
+
+/* Configura a lista de links do menu. */
+
+.menu {
+    list-style: none;      /* Remove as bolinhas da lista */
+    display: flex;         /* Coloca os itens lado a lado */
+    gap: 17px;             /* Define o espaço entre os links */
 }
 
-.menu a{
-    color:white;
-    font-weight: 600;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: 0.3s;
+
+/* Estiliza os links que estão dentro do menu. */
+
+.menu a {
+    color: white;          /* Define a cor dos links */
+    font-weight: 600;      /* Deixa a fonte seminegrito */
+    padding: 10px 15px;    /* Cria espaço interno nos links */
+    border-radius: 10px;   /* Arredonda os cantos */
+    transition: 0.3s;      /* Suaviza as mudanças visuais */
 }
 
-.menu a:hover{
-    background-color: red;
-    transition: 0.2s;
+
+/* Efeito aplicado quando o mouse passa sobre um link. */
+
+.menu a:hover {
+    background-color: red; /* Muda o fundo do link para vermelho */
+    transition: 0.2s;      /* Define a duração da transição */
 }
 
-/* HERO - GRID */
-.hero{
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 35px;
-    padding:50px 0px;
-    align-items:center;
+
+/* =====================================================
+   HERO — SEÇÃO PRINCIPAL
+   ===================================================== */
+
+/* A seção hero costuma apresentar o título, o texto,
+   os botões e uma imagem de destaque do site. */
+
+.hero {
+    display: grid;                       /* Ativa o CSS Grid */
+    grid-template-columns: 1.2fr 1fr;    /* Cria duas colunas proporcionais */
+    gap: 35px;                            /* Espaço entre as colunas */
+    padding: 50px 0px;                    /* Espaçamento acima e abaixo */
+    align-items: center;                  /* Centraliza os itens verticalmente */
 }
 
-.hero h1{
-    font-size:30px;
-    line-height: 1.15;
-    color:#111827;
-    margin:20px 0
+
+/* Estiliza o título principal dentro da seção hero. */
+
+.hero h1 {
+    font-size: 30px;       /* Define o tamanho do título */
+    line-height: 1.15;     /* Aproxima as linhas do título */
+    color: #111827;        /* Define a cor do texto */
+    margin: 20px 0;        /* Espaço acima e abaixo do título */
 }
 
-hero p{
-    font-size: 25px;
-    color: #4b5563;
-    margin-bottom:25px;
+
+/* Estiliza os parágrafos dentro da seção hero. */
+
+.hero p {
+    font-size: 25px;       /* Aumenta o tamanho do texto */
+    color: #4b5563;        /* Define um cinza para o parágrafo */
+    margin-bottom: 25px;   /* Cria espaço abaixo do parágrafo */
 }
 
-/* INLINE */
-.etiqueta-inline{
-    display: inline;
-    background: #dbeafe;
-    color: #1d4ed8;
-    padding: 4px 8px;
-    border-radius: 10px;
-    font-weight: 700;
+
+/* =====================================================
+   INLINE — DESTAQUES DENTRO DO TEXTO
+   ===================================================== */
+
+/* A classe etiqueta-inline destaca uma palavra ou trecho
+   sem obrigatoriamente iniciar uma nova linha. */
+
+.etiqueta-inline {
+    display: inline;             /* Mantém o elemento na mesma linha */
+    background: #dbeafe;         /* Fundo azul-claro */
+    color: #1d4ed8;              /* Texto azul */
+    padding: 4px 8px;            /* Espaçamento interno */
+    border-radius: 10px;         /* Cantos arredondados */
+    font-weight: 700;            /* Texto em negrito */
 }
 
-.destaque-inline{
-    display: inline;
-    color: #b91c1c;
-    font-weight: 700;
+
+/* Destaca um trecho do texto usando a cor vermelha. */
+
+.destaque-inline {
+    display: inline;       /* Mantém o destaque na linha */
+    color: #b91c1c;        /* Define a cor vermelha escura */
+    font-weight: 700;      /* Deixa o texto em negrito */
 }
 
-/* BOTÃO */
-.botao{
-    display:inline-block;
+
+/* =====================================================
+   BOTÃO — ESTILIZAÇÃO DOS BOTÕES
+   ===================================================== */
+
+/* A classe botao define o comportamento básico
+   dos elementos que funcionam como botões. */
+
+.botao {
+    display: inline-block; /* Permite largura, altura e padding */
 }
 
-.botao-primario{
-    background: #b91c1c;
-    color: white;
-    border-radius:10px;
+
+/* Estilo do botão principal, usado para dar destaque
+   à ação mais importante. */
+
+.botao-primario {
+    background: #b91c1c;   /* Fundo vermelho escuro */
+    color: white;          /* Texto branco */
+    border-radius: 10px;   /* Arredonda os cantos */
 }
 
-.botao-secundario{
-    background: #e5e7eb;
-    color: black;
-    border-radius:10px;
+
+/* Estilo do botão secundário, com aparência mais discreta. */
+
+.botao-secundario {
+    background: #e5e7eb;   /* Fundo cinza-claro */
+    color: black;          /* Texto preto */
+    border-radius: 10px;   /* Arredonda os cantos */
 }
 
-.hero-imagem img{
-    width: 100%;
-    height: 430px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow: 0 3px 14px gray;
+
+/* Configura a imagem que aparece na seção principal.
+   O seletor seleciona imagens dentro de hero-imagem. */
+
+.hero-imagem img {
+    width: 100%;                 /* Ocupa toda a largura disponível */
+    height: 430px;               /* Define a altura da imagem */
+    object-fit: cover;           /* Preenche a área sem distorcer */
+    border-radius: 20px;         /* Arredonda os cantos */
+    box-shadow: 0 3px 14px gray; /* Adiciona sombra ao redor */
 }
 
-/* SEÇÕES */
-.secao{
-    padding:28px 0 52px 0;
+
+/* =====================================================
+   SEÇÕES — ESPAÇAMENTO E TÍTULOS
+   ===================================================== */
+
+/* Define o espaçamento vertical das seções do site. */
+
+.secao {
+    padding: 28px 0 52px 0;
+    /* 28px em cima, 0 nas laterais e 52px embaixo */
 }
 
-.titulo-secao{
-    margin-bottom: 24px;
+
+/* Cria espaço abaixo do bloco que contém o título da seção. */
+
+.titulo-secao {
+    margin-bottom: 24px; /* Separa o título do conteúdo seguinte */
 }
 
-.titulo-secao h2{
-    font-size: 35px;
-    margin-bottom:6px;
+
+/* Estiliza os títulos h2 dentro de titulo-secao. */
+
+.titulo-secao h2 {
+    font-size: 35px;       /* Define o tamanho do subtítulo */
+    margin-bottom: 6px;    /* Espaço abaixo do subtítulo */
 }
 
-.titulo-secao p{
-    color: #6b7280;
+
+/* Estiliza os parágrafos da área de título. */
+
+.titulo-secao p {
+    color: #6b7280; /* Define a cor cinza do texto */
 }
 
-/* BLOCKS */
-.bloco-historia{
-    background: white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow: 0 10px 30px black;
+
+/* =====================================================
+   BLOCKS — CAIXAS E CONTEÚDOS EM DESTAQUE
+   ===================================================== */
+
+/* Estiliza a caixa que contém o conteúdo da história
+   ou outra informação apresentada em bloco. */
+
+.bloco-historia {
+    background: white;             /* Fundo branco */
+    padding: 20px;                 /* Espaçamento interno */
+    border-radius: 10px;           /* Cantos arredondados */
+    box-shadow: 0 10px 30px black; /* Sombra ao redor da caixa */
 }
 
-.caixa-block{
-    color: #7f1d1d;
+
+/* Cria uma caixa de destaque com fundo em degradê. */
+
+.caixa-block {
+    color: #7f1d1d; /* Texto vermelho escuro */
+
     margin-bottom: 15px;
+    /* Espaço abaixo da caixa */
+
     font-weight: 600;
+    /* Deixa o texto seminegrito */
+
     background: linear-gradient(135deg, #fee2e2, #fecaca);
-    padding:20px;
-    border-radius:10px;
-}
+    /* Cria um degradê diagonal entre dois tons de rosa */
 
-/* FOOTER / GRID */
-.rodape{
-    background: #0f172a;
-    color:white;
-    margin-top: 50px;
-    padding: 40px 0px;
-}
+    padding: 20px;
+    /* Espaçamento interno */
 
-.rodape-grid{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:30px;
-}
-
-.rodape-grid h3{
-    font-size: 25px;
-    margin-bottom:15px;
-}
-
-.rodape-grid p{
-    color:#d1d5db;
-    margin-bottom:10px;
+    border-radius: 10px;
+    /* Arredonda os cantos */
 }
 
 
+/* =====================================================
+   FOOTER — RODAPÉ DO SITE
+   ===================================================== */
 
+/* Estiliza a área inferior da página, chamada rodapé. */
+
+.rodape {
+    background: #0f172a;  /* Fundo azul-marinho */
+    color: white;         /* Cor padrão dos textos */
+    margin-top: 50px;     /* Espaço acima do rodapé */
+    padding: 40px 0px;    /* Espaçamento interno vertical */
+}
+
+
+/* Organiza as informações do rodapé em três colunas. */
+
+.rodape-grid {
+    display: grid;                       /* Ativa o CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria 3 colunas de mesma largura */
+
+    gap: 30px;                            /* Espaço entre as colunas */
+}
+
+
+/* Estiliza os títulos de cada coluna do rodapé. */
+
+.rodape-grid h3 {
+    font-size: 25px;       /* Define o tamanho do título */
+    margin-bottom: 15px;   /* Espaço abaixo do título */
+}
+
+
+/* Estiliza os parágrafos dentro das colunas do rodapé. */
+
+.rodape-grid p {
+    color: #d1d5db;        /* Texto em cinza-claro */
+    margin-bottom: 10px;   /* Espaço entre os parágrafos */
+} 
+ 
