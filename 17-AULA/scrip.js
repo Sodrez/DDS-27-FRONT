@@ -3,7 +3,7 @@ console.log("sim")
 console.log("Oi, sou eu")
 
 // Caxinha de alerta
-// alert("ME VEJA AGORA, IMEDIATAMENTE, NÃO É OPCIONAL")
+// c
 
 // VARIAVEIS
 var nome = "Cristiano" // String ou cadeia
