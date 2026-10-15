@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<!-- Informa ao navegador que o documento utiliza HTML5. -->
+
+<html lang="pt-BR">
+<!-- Elemento raiz do documento.
+     lang="pt-BR" informa que o idioma da página é português do Brasil. -->
+
+<head>
+    <!-- Guarda configurações e informações sobre a página.
+         O conteúdo do head normalmente não aparece no corpo do site. -->
+
+    <meta charset="UTF-8">
+    <!-- Permite exibir corretamente acentos e caracteres especiais,
+         como "água", "economização" e "preservação". -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajuda a página a se adaptar à largura da tela do dispositivo.
+         É importante para a visualização em celulares. -->
+
+    <title>Jogos - Conta Gotas</title>
+    <!-- Define o texto exibido na aba do navegador. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Conecta o HTML ao arquivo style.css.
+         rel="stylesheet" indica que o arquivo é uma folha de estilos.
+         href informa o caminho do arquivo CSS. -->
+</head>
+
+<body>
+    <!-- Começa o conteúdo visível da página. -->
+<div class="faixa-separadora"></div>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <!-- header representa o cabeçalho do site.
+             A classe topo permite personalizar sua aparência no CSS. -->
+
+        <div class="cabecalho container">
+            <!-- div agrupa elementos.
+                 Este elemento possui duas classes:
+                 cabecalho e container.
+                 O CSS pode usar as duas classes para aplicar estilos. -->
+
+            <a class="logo" href="index.html">
+                <!-- a cria um link.
+                     href="index.html" faz a logo levar à página inicial.
+                     class="logo" permite estilizar esse link no CSS. -->
+
+                <img
+                    src="COLOQUE_AQUI_A_URL_DA_LOGO"
+                    alt="Logo Conta Gotas">
+                <!-- img exibe uma imagem.
+                     src informa o endereço ou caminho da imagem.
+                     alt descreve a imagem para leitores de tela
+                     e também serve como texto alternativo. -->
+            </a>
+
+            <nav class="menu">
+                <!-- nav agrupa os links de navegação do site.
+                     A classe menu permite estilizar esses links. -->
+
+                <a href="index.html">Home</a>
+                <!-- Link para a página inicial. -->
+
+                <a href="economizar.html">Como economizar</a>
+                <!-- Link para a página com dicas de economia de água. -->
+
+                <a class="ativo" href="jogos.html">Jogos</a>
+                <!-- Link para a página de jogos.
+                     A classe ativo destaca a página atual no menu. -->
+            </nav>
+
+        </div>
+    </header>
+<div class="faixa-separadora"></div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+        <!-- main representa o conteúdo principal da página.
+             A classe container limita e centraliza sua largura
+             conforme as regras definidas no CSS. -->
+
+        <section class="pagina-jogos">
+            <!-- section agrupa o conteúdo relacionado à página de jogos.
+                 A classe pagina-jogos controla sua aparência no CSS. -->
+
+            <h1>Aprenda brincando!</h1>
+            <!-- h1 é o título principal da página.
+                 Normalmente, representa o assunto principal do conteúdo. -->
+
+            <p>
+                <!-- p cria um parágrafo. -->
+
+                Descubra como economizar água de maneira divertida
+                com este jogo educativo.
+
+            </p>
+
+            <a
+                class="botao-jogo"
+                href="https://www.ludoeducativo.com.br/pt/play/ecocasa-remake/hd"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Jogar EcoCasa
+
+                <!-- Este link leva ao jogo educativo EcoCasa.
+                     class="botao-jogo" faz o link parecer um botão.
+
+                     href define o endereço de destino.
+
+                     target="_blank" solicita que o destino abra
+                     em uma nova aba ou janela.
+
+                     rel="noopener noreferrer" adiciona proteções
+                     ao abrir um destino em outra aba.
+
+                     O texto "Jogar EcoCasa" é o conteúdo clicável. -->
+            </a>
+
+        </section>
+    </main>
+
+<div class="faixa-separadora"></div>
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <!-- footer representa o rodapé do site.
+             A classe rodape permite definir seu fundo e espaçamento. -->
+
+        <div class="container rodape-grid">
+            <!-- Agrupa as três colunas do rodapé.
+                 container controla a largura;
+                 rodape-grid permite organizar as colunas com CSS Grid. -->
+
+            <section class="rodape-col">
+                <!-- Primeira coluna: informações sobre o projeto. -->
+
+                <h2>Sobre nós</h2>
+                <!-- Título da seção do rodapé. -->
+
+                <p>
+                    A campanha Conta Gotas incentiva a economia
+                    de água e a preservação dos recursos naturais.
+                </p>
+                <!-- Parágrafo com uma descrição do projeto. -->
+
+            </section>
+
+            <section class="rodape-col">
+                <!-- Segunda coluna: links para outras páginas. -->
+
+                <h2>Mapa do Site</h2>
+                <!-- Título da lista de navegação. -->
+
+                <a href="index.html">HOME PAGE</a>
+                <!-- Link para a página inicial. -->
+
+                <a href="economizar.html">COMO ECONOMIZAR</a>
+                <!-- Link para a página de dicas. -->
+
+                <a href="jogos.html">JOGOS</a>
+                <!-- Link para a página atual. -->
+
+                <a href="contato.html">CONTATO</a>
+                <!-- Link para a página de contato. -->
+
+            </section>
+
+            <section class="rodape-col">
+                <!-- Terceira coluna: informações de contato. -->
+
+                <h2>Contato</h2>
+                <!-- Título da seção. -->
+
+                <p>Email: contato@contagotas.org</p>
+                <!-- Exibe o endereço de e-mail como texto.
+                     Assim escrito, não é automaticamente um link
+                     para abrir o aplicativo de e-mail. -->
+
+            </section>
+
+        </div>
+    </footer>
+<div class="faixa-separadora"></div>
+</body>
+<!-- Fecha o corpo da página. -->
+
+</html>
+<!-- Fecha o documento HTML. -->

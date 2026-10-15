@@ -1,117 +1,695 @@
+
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+   ===================================================== */
+
+/* O asterisco (*) seleciona TODOS os elementos HTML.
+   box-sizing: border-box faz a largura e a altura incluírem
+   o conteúdo, o padding e a borda do elemento.
+   Isso facilita controlar os tamanhos.
+   #07517a
+   #35afd4  */
 * {
-    margin: 0px;              
-    padding: 0px;             
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
+/* body representa o corpo da página, onde fica o conteúdo visível. */
 body {
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    background-color: #0a4b73;
-    color: #737373;
+    margin: 0; /* Remove a margem padrão do navegador. */
+
+    font-family: Arial, sans-serif;
+    /* Define a fonte. Se Arial não estiver disponível,
+       o navegador tenta usar outra fonte sem serifa. */
+
+    color: #777777;
+    /* Define a cor padrão dos textos: cinza. */
+
+    background: #35afd4;
+    /* Define a cor de fundo da página: azul-claro. */
 }
 
-a {
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-}
-
+/* .container seleciona elementos que possuem class="container". */
 .container {
-    width: 90%;          /* Ocupa 90% da largura disponível */
-    margin: 0px auto;    /* Centraliza horizontalmente */
-    max-width: 1200px;    /* Impede que fique largo demais */
+    width: 92%;
+    /* A largura ocupa 92% do espaço disponível no elemento pai. */
+
+    max-width: 1120px;
+    /* Impede que a largura ultrapasse 1120 pixels. */
+
+    margin: 0 auto;
+    /* 0 remove as margens superior e inferior.
+       auto centraliza horizontalmente quando há espaço disponível. */
+}
+.faixa-separadora{
+    width: 100%;       /* Largura total da página */
+    height: 15px;      /* Altura da faixa (você pode aumentar ou diminuir) */
+    background: #07517a; /* A cor azul que você escolher */
+}
+/* Seleciona todos os elementos h2 da página. */
+h2 {
+    margin: 0 0 10px;
+    /* Margem: 0 em cima, auto não é usado aqui,
+       0 nas laterais e 10px embaixo.
+       Na prática: top 0, direita 0, bottom 10px, esquerda 0. */
+
+    font-size: 16px; /* Define o tamanho do texto. */
+
+    font-weight: normal;
+    /* Remove o negrito padrão dos títulos h2. */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente. */
 }
 
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+/* Seleciona o elemento com class="topo". */
 .topo {
-    background: #2298e1;              /* Fundo azul-marinho */           
-    z-index: 100;                      /* Mantém o topo sobre outros elementos */
-    padding: 70px 30px;
-    margin-top: 50px;
+    background: #35afd4;
+    /* Define o fundo azul-escuro do cabeçalho. */
+
+    padding: 18px 0 7px;
+    /* Espaçamento interno:
+       18px em cima, 0 nas laterais e 7px embaixo. */
 }
 
-.navegacao {
-    display: flex;                    /* Ativa o Flexbox */
-    min-height: 65px;                  /* Define a altura mínima */
-    align-items: center;               /* Centraliza os itens verticalmente */
-    justify-content: space-between;    /* Separa logo e menu */
-    gap: 20px;                         /* Espaço entre os elementos */
+/* Seleciona o elemento com class="cabecalho". */
+.cabecalho {
+    display: flex;
+    /* Ativa o Flexbox para organizar os elementos filhos
+       em uma linha, por padrão. */
+
+    justify-content: space-between;
+    /* Distribui os elementos nas extremidades:
+       um fica à esquerda e outro à direita. */
+
+    align-items: center;
+    /* Alinha os elementos verticalmente ao centro. */
+
+    gap: 20px;
+    /* Cria um espaço de 20px entre os elementos filhos. */
 }
 
-.menu {
-    list-style: none;      /* Remove as bolinhas da lista */
-    display: flex;         /* Coloca os itens lado a lado */
-    gap: 50px;             /* Define o espaço entre os links */
+/* Seleciona o elemento com class="logo". */
+.logo {
+    display: block;
+    /* Faz o elemento se comportar como um bloco. */
+
+    width: 220px; /* Define a largura em pixels. */
+
+    height: 70px; /* Define a altura em pixels. */
+
+    background: white; /* Define o fundo branco. */
+
+    padding: 5px;
+    /* Cria 5px de espaço interno entre o conteúdo e as bordas. */
 }
 
-.menu a {
-    color: #737373;          /* Define a cor dos links */
-    font-weight: 600;      /* Deixa a fonte seminegrito */
-    padding: 10px 15px;    /* Cria espaço interno nos links */
-    border-radius: 10px;   /* Arredonda os cantos */
-    transition: 0.3s;      /* Suaviza as mudanças visuais */
-}
-
-.bloco-branco{
-    background-color: white;
-    padding: 200px 30px;
-    margin-left: 40px;
-    margin-right: 60px;
-}
-
-.hero {
-    display: grid;                       /* Ativa o CSS Grid */
-    grid-template-columns: 1.2fr 1fr;    /* Cria duas colunas proporcionais */
-    gap: 35px;                            /* Espaço entre as colunas */
-    padding: 50px 0px;                    /* Espaçamento acima e abaixo */
-    align-items: center;                  /* Centraliza os itens verticalmente */
-}
-
-main{
-    background-color: #2298e1;
-    margin-top: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-    
-}
-
-.bloco-branco-menor{
-    background-color: white;
-    padding: 80px 30px;
-    margin-left: 40px;
-    margin-right: 60px;
-    border-radius: 10px;
-}
-
-.hero2 {
-    
-    grid-template-columns: 1.2fr 1fr;    /* Cria duas colunas proporcionais */
-    gap: 35px;                            /* Espaço entre as colunas */
-    padding: 50px 0px;                    /* Espaçamento acima e abaixo */
-    align-items: center;                  /* Centraliza os itens verticalmente */
-}
-
-/* GRID */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background-color: rgb(26, 25, 25);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.card img {
+/* Seleciona as imagens que estão dentro de .logo. */
+.logo img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    /* Faz a imagem ocupar toda a largura disponível. */
+
+    height: 100%;
+    /* Faz a imagem ocupar toda a altura disponível. */
+
+    object-fit: contain;
+    /* Mantém a proporção da imagem e faz com que ela caiba
+       no espaço disponível sem ser cortada.
+       Pode sobrar espaço vazio nas laterais ou em cima. */
 }
 
-.card-conteudo {
-    padding: 20px;
+/* Seleciona o elemento com class="menu". */
+.menu {
+    display: flex;
+    /* Coloca os links do menu lado a lado. */
+
+    flex-wrap: wrap;
+    /* Permite que os links passem para outra linha
+       se não houver espaço suficiente. */
+
+    background: white; /* Fundo branco do menu. */
 }
 
-.card h3 {
-    font-size: 30px;
+/* Seleciona os links a que estão dentro de .menu. */
+.menu a {
+    display: block;
+    /* Faz cada link ocupar uma área retangular. */
+
+    padding: 12px 16px;
+    /* 12px de espaço interno em cima e embaixo;
+       16px nas laterais. */
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links. */
+
+    color: #666666; /* Define a cor do texto dos links. */
+}
+
+/* A vírgula separa dois seletores.
+   Esta regra vale para:
+   1. Links do menu quando o mouse está sobre eles (:hover).
+   2. Links do menu que possuem a classe .ativo. */
+.menu a:hover,
+.menu a.ativo {
+    background: #e8f6fb;
+    /* Aplica um fundo azul bem-claro. */
+
+    color: #07517a;
+    /* Muda a cor do texto para azul-escuro. */
+}
+
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+   ===================================================== */
+
+/* Seleciona o elemento main. */
+main {
+    padding-top: 30px;
+    /* Cria 30px de espaço interno acima do conteúdo. */
+
+    padding-bottom: 30px;
+    /* Cria 30px de espaço interno abaixo do conteúdo. */
+}
+
+/* Seleciona o elemento com class="principal-home". */
+.principal-home {
+    display: grid;
+    /* Ativa o CSS Grid para organizar os elementos em uma grade. */
+
+    grid-template-columns: 1fr 1fr;
+    /* Cria duas colunas com a mesma proporção de espaço.
+       1fr + 1fr significa duas colunas iguais. */
+
+    gap: 16px;
+    /* Cria 16px de espaço entre as linhas e colunas da grade. */
+}
+
+/* Seleciona todos os elementos com class="painel". */
+.painel {
+    background: white; /* Fundo branco para os painéis. */
+
+    padding: 15px;
+    /* Cria 15px de espaço interno em todos os lados. */
+}
+
+
+/* =====================================================
+   ÁREA DO VÍDEO
+   ===================================================== */
+
+/* Seleciona a área que representa o espaço reservado ao vídeo. */
+.video-placeholder {
+    height: 180px; /* Define a altura da área. */
+
+    background: #050505;
+    /* Define um fundo quase preto. */
+
+    color: white; /* Deixa o texto branco. */
+
+    display: flex;
+    /* Ativa o Flexbox para posicionar o texto. */
+
+    align-items: center;
+    /* Centraliza o texto verticalmente. */
+
+    justify-content: center;
+    /* Centraliza o texto horizontalmente. */
+
+    text-align: center;
+    /* Centraliza o texto caso ele ocupe mais de uma linha. */
+
+    padding: 15px;
+    /* Evita que o texto fique encostado nas bordas. */
+}
+
+/* Seleciona um iframe que esteja dentro de .video-painel.
+   Um iframe pode incorporar conteúdo de outra página,
+   como um vídeo de uma plataforma compatível. */
+.video-painel iframe {
+    display: block;
+    /* Faz o iframe se comportar como um bloco. */
+
+    width: 100%; /* Ocupa toda a largura disponível. */
+
+    height: 180px; /* Define a altura do vídeo incorporado. */
+
+    border: 0; /* Remove a borda padrão do iframe. */
+}
+
+
+/* =====================================================
+   REDES SOCIAIS
+   ===================================================== */
+
+/* Seleciona o elemento que agrupa os links das redes sociais. */
+.redes {
+    display: grid;
+    /* Organiza os links usando CSS Grid. */
+
+    grid-template-columns: repeat(3, 35px);
+    /* Cria 3 colunas, cada uma com 35px de largura.
+       repeat(3, 35px) repete a mesma medida três vezes. */
+
+    justify-content: center;
+    /* Centraliza a grade horizontalmente. */
+
+    gap: 8px 12px;
+    /* 8px entre as linhas e 12px entre as colunas. */
+
+    margin-bottom: 18px;
+    /* Cria 18px de margem abaixo da grade. */
+}
+
+/* Seleciona os links que estão dentro de .redes. */
+.redes a {
+    display: flex;
+    /* Ativa o Flexbox dentro de cada botão social. */
+
+    align-items: center;
+    /* Centraliza o símbolo verticalmente. */
+
+    justify-content: center;
+    /* Centraliza o símbolo horizontalmente. */
+
+    width: 35px; /* Largura do botão social. */
+
+    height: 35px; /* Altura do botão social. */
+
+    background: #050505; /* Fundo quase preto. */
+
+    color: white; /* Símbolo branco. */
+
+    text-decoration: none;
+    /* Remove o sublinhado do link. */
+
+    font-weight: bold; /* Deixa o símbolo em negrito. */
+
+    border-radius: 5px;
+    /* Arredonda levemente os cantos do botão. */
+}
+
+/* Muda o fundo dos links sociais quando o mouse passa sobre eles. */
+.redes a:hover {
+    background: #1685bf; /* Fundo azul ao passar o mouse. */
+}
+
+
+/* =====================================================
+   FORMULÁRIO DE LOGIN
+   ===================================================== */
+
+/* Seleciona o formulário com class="login-form". */
+.login-form {
+    display: flex;
+    /* Organiza os campos e o botão com Flexbox. */
+
+    flex-direction: column;
+    /* Coloca os elementos em uma coluna, um abaixo do outro. */
+
+    align-items: center;
+    /* Centraliza os campos e o botão horizontalmente. */
+
+    gap: 8px;
+    /* Cria 8px de espaço entre os elementos do formulário. */
+}
+
+/* Seleciona os campos input dentro de .login-form. */
+.login-form input {
+    width: 85%;
+    /* Cada campo ocupa 85% da largura disponível. */
+
+    border: 0; /* Remove a borda padrão. */
+
+    border-radius: 7px;
+    /* Arredonda os cantos dos campos. */
+
+    padding: 8px 12px;
+    /* 8px de espaço interno em cima e embaixo;
+       12px nas laterais. */
+
+    background: #1685bf; /* Fundo azul dos campos. */
+
+    color: white; /* Cor do texto digitado. */
+}
+
+/* Seleciona o texto de orientação dentro dos campos.
+   ::placeholder é um pseudoelemento do CSS. */
+.login-form input::placeholder {
+    color: white; /* Deixa "E-mail" e "Senha" brancos. */
+}
+
+
+/* Estilo geral dos elementos com class="botao". */
+.botao {
+    border: 0; /* Remove a borda padrão. */
+
+    border-radius: 20px;
+    /* Arredonda bastante os cantos do botão. */
+
+    padding: 8px 20px;
+    /* Define o espaço interno vertical e horizontal. */
+
+    cursor: pointer;
+    /* Mostra o cursor de mão ao passar sobre o botão. */
+}
+
+/* Seleciona elementos com class="botao-verde". */
+.botao-verde {
+    background: #43c832; /* Fundo verde. */
+
+    color: white; /* Texto branco. */
+}
+
+/* Muda a cor do botão verde quando o mouse passa sobre ele. */
+.botao-verde:hover {
+    background: #2ba51c; /* Verde mais escuro. */
+}
+
+
+/* =====================================================
+   APOIADORES
+   ===================================================== */
+
+/* Seleciona a seção com class="apoio". */
+.apoio {
+    grid-column: 1 / -1;
+    /* Faz o painel ocupar todas as colunas da grade.
+       1 é a primeira linha vertical da grade;
+       -1 é a última linha vertical.
+       Assim, o painel atravessa as duas colunas. */
+
+    text-align: center;
+    /* Centraliza o texto dentro da seção. */
+}
+
+/* Seleciona o agrupamento das logos dos apoiadores. */
+.logos-apoio {
+    display: flex;
+    /* Organiza as imagens com Flexbox. */
+
+    align-items: center;
+    /* Alinha as imagens verticalmente ao centro. */
+
+    justify-content: space-around;
+    /* Distribui espaço ao redor de cada imagem. */
+
+    flex-wrap: wrap;
+    /* Permite que as imagens passem para outra linha
+       quando não houver espaço suficiente. */
+
+    gap: 20px;
+    /* Cria espaço entre as imagens. */
+}
+
+/* Seleciona as imagens que estão dentro de .logos-apoio. */
+.logos-apoio img {
+    width: 100px; /* Define a largura de cada imagem. */
+
+    height: 45px; /* Define a altura de cada imagem. */
+
+    object-fit: contain;
+    /* Mantém a proporção e evita cortar a imagem. */
+}
+
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+
+/* Seleciona o rodapé do site. */
+.rodape {
+    background: #35afd4; /* Fundo azul-escuro. */
+
+    padding: 25px 0;
+    /* 25px de espaço interno em cima e embaixo;
+       0 nas laterais. */
+}
+
+/* Seleciona o agrupamento das colunas do rodapé. */
+.rodape-grid {
+    display: grid;
+    /* Ativa o CSS Grid. */
+
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria 3 colunas de mesma proporção. */
+
+    background: white; /* Fundo branco do agrupamento. */
+}
+
+/* Seleciona cada coluna do rodapé. */
+.rodape-col {
+    padding: 18px;
+    /* Cria espaço interno ao redor do conteúdo. */
+
+    min-width: 0;
+    /* Permite que o item da grade encolha quando necessário,
+       evitando que seu conteúdo force a coluna a ficar larga. */
+}
+
+/* Seleciona uma coluna .rodape-col que tenha
+   imediatamente antes dela outra .rodape-col.
+   O sinal + significa "irmão adjacente". */
+.rodape-col + .rodape-col {
+    border-left: 1px solid #35afd4;
+    /* Cria uma linha azul de 1px à esquerda das
+       segunda e terceira colunas. */
+}
+
+/* Seleciona os parágrafos dentro das colunas do rodapé. */
+.rodape-col p {
+    font-size: 12px; /* Diminui o tamanho do texto. */
+
+    line-height: 1.5;
+    /* Define o espaçamento entre as linhas.
+       1.5 significa 1,5 vez o tamanho da fonte. */
+}
+
+/* Seleciona os links dentro das colunas do rodapé. */
+.rodape-col a {
+    display: block;
+    /* Faz cada link começar em uma nova linha. */
+
     margin-bottom: 10px;
+    /* Cria 10px de margem abaixo de cada link. */
+
+    color: #777777; /* Define a cor do link. */
+
+    text-decoration: none;
+    /* Remove o sublinhado. */
+
+    font-size: 12px; /* Define o tamanho do texto. */
+}
+
+/* Muda a cor dos links do rodapé ao passar o mouse. */
+.rodape-col a:hover {
+    color: #1685bf; /* Deixa o link azul. */
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE: TELAS PEQUENAS
+   ===================================================== */
+
+/* Aplica as regras abaixo quando a largura da tela
+   for de até 700px. É uma media query. */
+@media (max-width: 700px) {
+
+    /* Seleciona o agrupamento do cabeçalho. */
+    .cabecalho {
+        flex-direction: column;
+        /* Em vez de ficar em linha, a logo e o menu
+           passam a ficar um abaixo do outro. */
+    }
+
+    /* Seleciona o menu de navegação. */
+    .menu {
+        justify-content: center;
+        /* Centraliza os links do menu. */
+    }
+
+    /* Seleciona a grade principal da Home. */
+    .principal-home {
+        grid-template-columns: 1fr;
+        /* Troca duas colunas por apenas uma coluna.
+           Os painéis ficam um abaixo do outro. */
+    }
+
+    /* Seleciona a seção dos apoiadores. */
+    .apoio {
+        grid-column: auto;
+        /* Deixa a posição da seção seguir o fluxo normal
+           da grade, sem ocupar explicitamente todas as colunas. */
+    }
+
+    /* Seleciona as colunas do rodapé. */
+    .rodape-grid {
+        grid-template-columns: 1fr;
+        /* Transforma as três colunas em uma única coluna. */
+    }
+
+    /* Seleciona cada coluna do rodapé após a primeira. */
+    .rodape-col + .rodape-col {
+        border-left: 0;
+        /* Remove a linha vertical usada no computador. */
+
+        border-top: 1px solid #35afd4;
+        /* Coloca uma linha horizontal entre as colunas
+           que agora aparecem uma abaixo da outra. */
+    }
+}
+
+
+/* =====================================================
+   PÁGINA "COMO ECONOMIZAR"
+   ===================================================== */
+
+/* Seleciona a grade que contém os cartões de dicas. */
+.grade-dicas {
+    display: grid; /* Organiza os cartões em uma grade. */
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Cria 3 colunas proporcionais.
+       minmax(0, 1fr) permite que cada coluna encolha
+       sem ser forçada pelo tamanho mínimo do conteúdo. */
+
+    gap: 10px; /* Espaço entre os cartões. */
+
+    padding: 15px; /* Espaço interno da grade. */
+
+    margin-top: 30px; /* Espaço externo acima da grade. */
+
+    margin-bottom: 30px; /* Espaço externo abaixo da grade. */
+
+    background: white; /* Fundo branco da área dos cartões. */
+}
+
+/* Seleciona cada cartão de dica. */
+.dica-card {
+    background: #f3f3f3; /* Fundo cinza-claro. */
+
+    padding: 12px; /* Espaço interno do cartão. */
+
+    min-width: 0;
+    /* Permite que o cartão encolha dentro da grade. */
+
+    min-height: 175px;
+    /* Define uma altura mínima, mas o cartão pode crescer
+       se o conteúdo precisar de mais espaço. */
+}
+
+/* Seleciona os títulos h2 dentro dos cartões. */
+.dica-card h2 {
+    text-align: center; /* Centraliza o título. */
+
+    font-size: 16px; /* Define o tamanho do título. */
+
+    font-weight: normal; /* Remove o negrito padrão. */
+
+    margin-bottom: 10px; /* Espaço abaixo do título. */
+}
+
+/* A vírgula faz a mesma regra valer para parágrafos
+   e itens de lista dentro dos cartões. */
+.dica-card p,
+.dica-card li {
+    font-size: 10px; /* Texto pequeno dentro dos cartões. */
+
+    line-height: 1.4;
+    /* Espaçamento entre as linhas do texto. */
+}
+
+/* Seleciona apenas os parágrafos dentro dos cartões. */
+.dica-card p {
+    text-align: justify;
+    /* Alinha o texto às margens esquerda e direita. */
+}
+
+/* Seleciona listas não ordenadas dentro dos cartões. */
+.dica-card ul {
+    padding-left: 14px;
+    /* Reserva espaço à esquerda para os marcadores da lista. */
+
+    margin: 0;
+    /* Remove as margens padrão da lista. */
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE DOS CARTÕES
+   ===================================================== */
+
+/* Estas regras também são aplicadas em telas de até 700px. */
+@media (max-width: 700px) {
+
+    /* Seleciona a grade dos cartões de dicas. */
+    .grade-dicas {
+        grid-template-columns: 1fr;
+        /* Faz os cartões aparecerem em uma única coluna,
+           um abaixo do outro, em telas pequenas. */
+    }
+
+}
+
+
+/* =====================================================
+   PÁGINA DE JOGOS
+   ===================================================== */
+
+/* Seleciona a área principal da página de jogos. */
+.pagina-jogos {
+    background: white; /* Fundo branco. */
+
+    margin-top: 30px; /* Espaço externo acima da área. */
+
+    margin-bottom: 30px; /* Espaço externo abaixo da área. */
+
+    padding: 50px 20px;
+    /* 50px de espaço interno em cima e embaixo;
+       20px nas laterais. */
+
+    text-align: center; /* Centraliza o conteúdo textual. */
+}
+
+/* Seleciona os títulos h1 dentro de .pagina-jogos. */
+.pagina-jogos h1 {
+    color: #07517a; /* Título azul-escuro. */
+
+    font-size: 28px; /* Tamanho maior para o título principal. */
+}
+
+/* Seleciona os parágrafos dentro da página de jogos. */
+.pagina-jogos p {
+    margin-bottom: 25px;
+    /* Cria espaço abaixo do parágrafo,
+       separando-o do link do jogo. */
+}
+
+/* Seleciona o link que funciona visualmente como botão. */
+.botao-jogo {
+    display: inline-block;
+    /* Permite que o link fique na linha do texto,
+       mas aceite largura, altura e espaçamento interno. */
+
+    background: #43c832; /* Fundo verde. */
+
+    color: white; /* Texto branco. */
+
+    padding: 12px 25px;
+    /* 12px de espaço interno vertical;
+       25px de espaço interno horizontal. */
+
+    border-radius: 20px; /* Cantos arredondados. */
+
+    text-decoration: none;
+    /* Remove o sublinhado do link. */
+}
+
+/* Muda a cor do link-botão ao passar o mouse. */
+.botao-jogo:hover {
+    background: #2ba51c; /* Verde mais escuro. */
 }

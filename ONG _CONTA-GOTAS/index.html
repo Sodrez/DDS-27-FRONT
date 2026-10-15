@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Gotas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Aqui começa o conteúdo visível da página -->
+<div class="faixa-separadora"></div>
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <!-- header representa o cabeçalho do site -->
+
+        <div class="cabecalho container">
+            <!-- Agrupa a logo e o menu.
+                 Possui duas classes: cabecalho e container. -->
+
+            <a class="logo" href="index.html">
+                <!-- A logo é clicável e leva à página inicial -->
+
+                <img
+                    src="COLOQUE_AQUI_A_URL_DA_LOGO"
+                    alt="Logo Conta Gotas">
+                <!-- img exibe uma imagem.
+                     src indica onde ela está.
+                     alt descreve a imagem para acessibilidade
+                     e caso ela não carregue. -->
+            </a>
+
+            <nav class="menu">
+                <!-- nav agrupa os links de navegação do site -->
+
+                <a class="ativo" href="index.html">Home</a>
+                <!-- href indica o destino do link.
+                     A classe ativo destaca a página atual. -->
+
+                <a href="economizar.html">Como economizar</a>
+                <a href="jogos.html">Jogos</a>
+            </nav>
+        </div>
+    </header>
+<div class="faixa-separadora"></div>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+        <!-- main representa o conteúdo principal da página -->
+
+        <div class="principal-home">
+            <!-- Agrupa os painéis principais da página inicial -->
+
+            <!-- PAINEL DO VÍDEO -->
+            <section class="painel video-painel">
+                <!-- section agrupa conteúdo relacionado -->
+
+                <h2>Conheça nosso projeto</h2>
+                <!-- h2 é um título de nível 2 -->
+
+                <div class="video-placeholder">
+                    <!-- Área reservada para o vídeo -->
+
+                    <span>Coloque aqui o vídeo institucional</span>
+                    <!-- span agrupa um pequeno trecho de conteúdo -->
+                </div>
+            </section>
+
+            <!-- REDES SOCIAIS E LOGIN -->
+            <section class="painel social-painel">
+
+                <h2>Redes Sociais</h2>
+
+                <div class="redes">
+                    <!-- Agrupa os links das redes sociais -->
+
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+                    <a href="#" aria-label="TikTok">♪</a>
+                    <a href="#" aria-label="X">X</a>
+
+                    <!-- href="#" é um destino provisório.
+                         aria-label fornece um nome acessível
+                         para identificar cada link. -->
+                </div>
+
+                <h2>Faça seu login</h2>
+
+                <form class="login-form">
+                    <!-- form agrupa os campos de um formulário -->
+
+                    <input
+                        id="email-login"
+                        type="email"
+                        placeholder="E-mail"
+                        aria-label="E-mail"
+                        required>
+                    <!-- Campo para e-mail.
+                         type="email" indica o tipo de dado.
+                         placeholder mostra uma dica no campo.
+                         required torna o preenchimento obrigatório. -->
+
+                    <input
+                        id="senha-login"
+                        type="password"
+                        placeholder="Senha"
+                        aria-label="Senha"
+                        required>
+                    <!-- Campo de senha:
+                         type="password" oculta os caracteres digitados. -->
+
+                    <button type="submit" class="botao botao-verde">
+                        Entrar
+                    </button>
+                    <!-- Botão que tenta enviar o formulário.
+                         As classes controlam sua aparência no CSS. -->
+                </form>
+            </section>
+
+            <!-- APOIADORES -->
+            <section class="painel apoio">
+
+                <h2>Apoio</h2>
+
+                <div class="logos-apoio">
+                    <!-- Agrupa as imagens dos apoiadores -->
+
+                    <img src="imagens/logo-acer.png" alt="Acer">
+                    <img src="imagens/logo-alianca.png" alt="Aliança">
+                    <img src="imagens/logo-canon.png" alt="Canon">
+                    <img src="imagens/logo-compaq.png" alt="Compaq">
+                    <img src="imagens/logo-hp.png" alt="HP">
+
+                    <!-- Cada src aponta para um arquivo de imagem.
+                         Estes caminhos pressupõem uma pasta chamada imagens. -->
+                </div>
+            </section>
+        </div>
+    </main>
+<div class="faixa-separadora"></div>
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <!-- footer representa o rodapé do site -->
+
+        <div class="container rodape-grid">
+            <!-- Agrupa as três colunas do rodapé -->
+
+            <section class="rodape-col">
+                <h2>Sobre nós</h2>
+
+                <p>
+                    A campanha Conta Gotas tem como objetivo
+                    conscientizar a população sobre a economia de água.
+                </p>
+                <!-- p representa um parágrafo -->
+            </section>
+
+            <section class="rodape-col">
+                <h2>Mapa do Site</h2>
+
+                <a href="index.html">HOME PAGE</a>
+                <a href="economizar.html">COMO ECONOMIZAR</a>
+                <a href="jogos.html">JOGOS</a>
+                <a href="contato.html">CONTATO</a>
+                <!-- Links para as diferentes páginas do projeto -->
+            </section>
+
+            <section class="rodape-col">
+                <h2>Contato</h2>
+
+                <p>Email: contato@contagotas.org</p>
+                <a href="contato.html">Entre em contato</a>
+            </section>
+
+        </div>
+    </footer>
+<div class="faixa-separadora"></div>
+</body>
+</html>
