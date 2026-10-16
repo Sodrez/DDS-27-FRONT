@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Inter', sans-serif;
+    
+    /* Define a fonte. Se Arial não estiver disponível,
+       o navegador tenta usar outra fonte sem serifa. */
+
+    color: black;
+    /* Define a cor padrão dos textos: cinza. */
+
+    background: #2454A0;
+}
+
+
+
+.container {
+    width: 92%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* Seleciona todos os elementos h2 da página. */
+h2 {
+    margin: 0 0 10px;
+    /* Margem: 0 em cima, auto não é usado aqui,
+       0 nas laterais e 10px embaixo.
+       Na prática: top 0, direita 0, bottom 10px, esquerda 0. */
+
+    font-size: 16px; /* Define o tamanho do texto. */
+
+    font-weight: normal;
+    /* Remove o negrito padrão dos títulos h2. */
+
+    text-align: center;
+    /* Centraliza o texto horizontalmente. */
+}
+
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+/* Seleciona o elemento com class="topo". */
+.topo {
+    background: white;
+    /* Define o fundo azul-escuro do cabeçalho. */
+
+    padding: 18px 0 7px;
+    /* Espaçamento interno:
+       18px em cima, 0 nas laterais e 7px embaixo. */
+}
+
+/* Seleciona o elemento com class="cabecalho". */
+.cabecalho {
+    display: flex;
+    /* Ativa o Flexbox para organizar os elementos filhos
+       em uma linha, por padrão. */
+
+    justify-content: space-between;
+    /* Distribui os elementos nas extremidades:
+       um fica à esquerda e outro à direita. */
+
+    align-items: center;
+    /* Alinha os elementos verticalmente ao centro. */
+
+    gap: 20px;
+    /* Cria um espaço de 20px entre os elementos filhos. */
+}
+
+/* Seleciona o elemento com class="logo". */
+.logo {
+    display: block;
+    /* Faz o elemento se comportar como um bloco. */
+
+    width: 220px; /* Define a largura em pixels. */
+
+    height: 70px; /* Define a altura em pixels. */
+
+    background: white; /* Define o fundo branco. */
+
+    padding: 5px;
+    /* Cria 5px de espaço interno entre o conteúdo e as bordas. */
+}
+
+/* Seleciona as imagens que estão dentro de .logo. */
+.logo img {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura disponível. */
+
+    height: 100%;
+ 
+    object-fit: contain;
+
+}
+
+/* Seleciona o elemento com class="menu". */
+.menu {
+    display: flex;
+    /* Coloca os links do menu lado a lado. */
+
+    flex-wrap: wrap;
+    /* Permite que os links passem para outra linha
+       se não houver espaço suficiente. */
+
+    background: white; /* Fundo branco do menu. */
+}
+
+/* Seleciona os links a que estão dentro de .menu. */
+.menu a {
+    display: block;
+    /* Faz cada link ocupar uma área retangular. */
+
+    padding: 12px 16px;
+    /* 12px de espaço interno em cima e embaixo;
+       16px nas laterais. */
+
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links. */
+
+    color: black; /* Define a cor do texto dos links. */
+}
+
+
+.menu a:hover,
+.menu a.ativo {
+    background: white;
+
+
+    color: black;
+
+}
+
+/* IAMGEM  */
+.hero {
+    display: grid;                       /* Ativa o CSS Grid */
+    grid-template-columns: 1.2fr 1fr;    /* Cria duas colunas proporcionais */
+    gap: 35px;                            /* Espaço entre as colunas */
+    padding: 50px 0px;                    /* Espaçamento acima e abaixo */
+    align-items: center;                  /* Centraliza os itens verticalmente */
+}
+
+.hero-imagem img {
+    width: 100%;                 /* Ocupa toda a largura disponível */
+    height: 430px;               /* Define a altura da imagem */
+    object-fit: cover;           /* Preenche a área sem distorcer */
+    border-radius: 20px;         /* Arredonda os cantos */
+
+}
+
+#branco{
+    color: white;
+}
+#branco2{
+    color: white;
+}
+
+#AZUL{
+    color:#2454A0;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+#CENTRO{
+    color: white;
+    text-align: center;
+}
+
+
+/* -------------------------- */
+
+.grade-dicas {
+    display: grid; /* Organiza os cartões em uma grade. */
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Cria 3 colunas proporcionais.
+       minmax(0, 1fr) permite que cada coluna encolha
+       sem ser forçada pelo tamanho mínimo do conteúdo. */
+
+    gap: 10px; /* Espaço entre os cartões. */
+
+    padding: 15px; /* Espaço interno da grade. */
+
+    margin-top: 30px; /* Espaço externo acima da grade. */
+
+    margin-bottom: 30px; /* Espaço externo abaixo da grade. */
+
+    background: #2454A0; /* Fundo branco da área dos cartões. */
+    
+}
+
+/* Seleciona cada cartão de dica. */
+.dica-card {
+    background: #f3f3f3; /* Fundo cinza-claro. */
+
+    padding: 12px; /* Espaço interno do cartão. */
+
+    min-width: 0;
+    /* Permite que o cartão encolha dentro da grade. */
+
+    min-height: 175px;
+    /* Define uma altura mínima, mas o cartão pode crescer
+       se o conteúdo precisar de mais espaço. */
+        border-radius: 20px;
+}
+
+/* Seleciona os títulos h2 dentro dos cartões. */
+.dica-card h2 {
+    text-align: center; /* Centraliza o título. */
+
+    font-size: 16px; /* Define o tamanho do título. */
+
+    font-weight: normal; /* Remove o negrito padrão. */
+
+    margin-bottom: 10px; /* Espaço abaixo do título. */
+}
+
+/* A vírgula faz a mesma regra valer para parágrafos
+   e itens de lista dentro dos cartões. */
+.dica-card p,
+.dica-card li {
+    font-size: 10px; /* Texto pequeno dentro dos cartões. */
+
+    line-height: 1.4;
+    /* Espaçamento entre as linhas do texto. */
+}
+
+/* Seleciona apenas os parágrafos dentro dos cartões. */
+.dica-card p {
+    text-align: justify;
+    /* Alinha o texto às margens esquerda e direita. */
+}
+
+/* Seleciona listas não ordenadas dentro dos cartões. */
+.dica-card ul {
+    padding-left: 14px;
+    /* Reserva espaço à esquerda para os marcadores da lista. */
+
+    margin: 0;
+    /* Remove as margens padrão da lista. */
+}
+.dica-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* footer */
+.rodape {
+    background: #F0F4F5;  /* Fundo azul-marinho */
+    color: #007BFF;         /* Cor padrão dos textos */
+    margin-top: 50px;     /* Espaço acima do rodapé */
+    padding: 40px 0px;    /* Espaçamento interno vertical */
+}
+
+
+/* Organiza as informações do rodapé em três colunas. */
+
+.rodape-grid {
+    display: grid;                       /* Ativa o CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Cria 3 colunas de mesma largura */
+
+    gap: 30px;                            /* Espaço entre as colunas */
+}
+
+
+/* Estiliza os títulos de cada coluna do rodapé. */
+
+.rodape-grid h3 {
+    font-size: 25px;       /* Define o tamanho do título */
+    margin-bottom: 15px;   /* Espaço abaixo do título */
+}
+
+
+/* Estiliza os parágrafos dentro das colunas do rodapé. */
+
+.rodape-grid p {
+    color: black;        /* Texto em cinza-claro */
+    margin-bottom: 10px;   /* Espaço entre os parágrafos */
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------- */
+
+
+#cadastro{
+    text-align: center;
+    color: white;
+}
+
+/* formulario */
+
+.formulario {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-grupo input{
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-grupo textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-grupo textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ------------ */
+
+#rodape {
+    background-color: black;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+#rodape p {
+    margin: 8px;}
+
+    .botao-primario {
+    background: #FB5909;   /* Fundo vermelho escuro */
+    color: white;          /* Texto branco */
+    border-radius: 10px;   /* Arredonda os cantos */
+    text-align: center;
+}
+
+.botao-SEGUNDO{
+    background: #FB5909;
+    color: white;
+    text-align: left;
+}
+
+.botao-terceiro{
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
