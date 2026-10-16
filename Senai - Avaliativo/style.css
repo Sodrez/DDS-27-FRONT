@@ -27,9 +27,7 @@ body {
 /* Seleciona todos os elementos h2 da página. */
 h2 {
     margin: 0 0 10px;
-    /* Margem: 0 em cima, auto não é usado aqui,
-       0 nas laterais e 10px embaixo.
-       Na prática: top 0, direita 0, bottom 10px, esquerda 0. */
+   
 
     font-size: 16px; /* Define o tamanho do texto. */
 
@@ -41,9 +39,7 @@ h2 {
 }
 
 
-/* =====================================================
-   CABEÇALHO
-   ===================================================== */
+
 
 /* Seleciona o elemento com class="topo". */
 .topo {
@@ -104,8 +100,6 @@ h2 {
     /* Coloca os links do menu lado a lado. */
 
     flex-wrap: wrap;
-    /* Permite que os links passem para outra linha
-       se não houver espaço suficiente. */
 
     background: white; /* Fundo branco do menu. */
 }
@@ -120,9 +114,9 @@ h2 {
        16px nas laterais. */
 
     text-decoration: none;
-    /* Remove o sublinhado padrão dos links. */
+   
 
-    color: black; /* Define a cor do texto dos links. */
+    color: black; 
 }
 
 
@@ -137,18 +131,18 @@ h2 {
 
 /* IAMGEM  */
 .hero {
-    display: grid;                       /* Ativa o CSS Grid */
-    grid-template-columns: 1.2fr 1fr;    /* Cria duas colunas proporcionais */
-    gap: 35px;                            /* Espaço entre as colunas */
-    padding: 50px 0px;                    /* Espaçamento acima e abaixo */
-    align-items: center;                  /* Centraliza os itens verticalmente */
+    display: grid;                      
+    grid-template-columns: 1.2fr 1fr;   
+    gap: 35px;                          
+    padding: 50px 0px;                   
+    align-items: center;                 
 }
 
 .hero-imagem img {
-    width: 100%;                 /* Ocupa toda a largura disponível */
-    height: 430px;               /* Define a altura da imagem */
-    object-fit: cover;           /* Preenche a área sem distorcer */
-    border-radius: 20px;         /* Arredonda os cantos */
+    width: 100%;          
+    height: 430px;            
+    object-fit: cover;          
+    border-radius: 20px;       
 
 }
 
@@ -174,74 +168,64 @@ h2 {
 /* -------------------------- */
 
 .grade-dicas {
-    display: grid; /* Organiza os cartões em uma grade. */
+    display: grid;
 
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    /* Cria 3 colunas proporcionais.
-       minmax(0, 1fr) permite que cada coluna encolha
-       sem ser forçada pelo tamanho mínimo do conteúdo. */
 
-    gap: 10px; /* Espaço entre os cartões. */
 
-    padding: 15px; /* Espaço interno da grade. */
+    gap: 10px; 
 
-    margin-top: 30px; /* Espaço externo acima da grade. */
+    padding: 15px;
 
-    margin-bottom: 30px; /* Espaço externo abaixo da grade. */
+    margin-top: 30px; 
 
-    background: #2454A0; /* Fundo branco da área dos cartões. */
+    margin-bottom: 30px;
+
+    background: #2454A0; 
     
 }
 
-/* Seleciona cada cartão de dica. */
 .dica-card {
-    background: #f3f3f3; /* Fundo cinza-claro. */
+    background: #f3f3f3; 
 
-    padding: 12px; /* Espaço interno do cartão. */
+    padding: 12px; 
 
     min-width: 0;
-    /* Permite que o cartão encolha dentro da grade. */
-
     min-height: 175px;
-    /* Define uma altura mínima, mas o cartão pode crescer
-       se o conteúdo precisar de mais espaço. */
         border-radius: 20px;
 }
 
-/* Seleciona os títulos h2 dentro dos cartões. */
 .dica-card h2 {
-    text-align: center; /* Centraliza o título. */
+    text-align: center; 
 
-    font-size: 16px; /* Define o tamanho do título. */
+    font-size: 16px; 
 
-    font-weight: normal; /* Remove o negrito padrão. */
+    font-weight: normal; 
 
-    margin-bottom: 10px; /* Espaço abaixo do título. */
+    margin-bottom: 10px; 
 }
 
-/* A vírgula faz a mesma regra valer para parágrafos
-   e itens de lista dentro dos cartões. */
 .dica-card p,
 .dica-card li {
-    font-size: 10px; /* Texto pequeno dentro dos cartões. */
+    font-size: 10px; 
 
     line-height: 1.4;
-    /* Espaçamento entre as linhas do texto. */
+  
 }
 
-/* Seleciona apenas os parágrafos dentro dos cartões. */
+
 .dica-card p {
     text-align: justify;
-    /* Alinha o texto às margens esquerda e direita. */
+   
 }
 
-/* Seleciona listas não ordenadas dentro dos cartões. */
+
 .dica-card ul {
     padding-left: 14px;
-    /* Reserva espaço à esquerda para os marcadores da lista. */
+  
 
     margin: 0;
-    /* Remove as margens padrão da lista. */
+  
 }
 .dica-card img {
     width: 100%;
@@ -251,37 +235,37 @@ h2 {
 
 /* footer */
 .rodape {
-    background: #F0F4F5;  /* Fundo azul-marinho */
-    color: #007BFF;         /* Cor padrão dos textos */
-    margin-top: 50px;     /* Espaço acima do rodapé */
-    padding: 40px 0px;    /* Espaçamento interno vertical */
+    background: #F0F4F5; 
+    color: #007BFF;         
+    margin-top: 50px;     
+    padding: 40px 0px;    
 }
 
 
-/* Organiza as informações do rodapé em três colunas. */
+
 
 .rodape-grid {
-    display: grid;                       /* Ativa o CSS Grid */
+    display: grid;                     
     grid-template-columns: repeat(3, 1fr);
-    /* Cria 3 colunas de mesma largura */
+   
 
-    gap: 30px;                            /* Espaço entre as colunas */
+    gap: 30px;                           
 }
 
 
-/* Estiliza os títulos de cada coluna do rodapé. */
+
 
 .rodape-grid h3 {
-    font-size: 25px;       /* Define o tamanho do título */
-    margin-bottom: 15px;   /* Espaço abaixo do título */
+    font-size: 25px;      
+    margin-bottom: 15px;   
 }
 
 
-/* Estiliza os parágrafos dentro das colunas do rodapé. */
+
 
 .rodape-grid p {
-    color: black;        /* Texto em cinza-claro */
-    margin-bottom: 10px;   /* Espaço entre os parágrafos */
+    color: black;        
+    margin-bottom: 10px;  
 } 
 
 
@@ -322,9 +306,11 @@ h2 {
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .form-grupo input{
+    color: white;
     padding: 12px;
     border: none;
     border-radius: 4px;
@@ -332,6 +318,7 @@ h2 {
 }
 
 .form-grupo textarea {
+    color: white;
     padding: 12px;
     border: none;
     border-radius: 4px;
@@ -339,6 +326,7 @@ h2 {
 }
 
 .form-grupo textarea {
+    color: white;
     min-height: 150px;
     resize: vertical;
 }
@@ -355,9 +343,9 @@ h2 {
     margin: 8px;}
 
     .botao-primario {
-    background: #FB5909;   /* Fundo vermelho escuro */
-    color: white;          /* Texto branco */
-    border-radius: 10px;   /* Arredonda os cantos */
+    background: #FB5909;   
+    color: white;          
+    border-radius: 10px;   
     text-align: center;
 }
 
